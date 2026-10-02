@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>AI Question Paper Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="con">
+        <header>
+            <h1>AI Question Paper Generator</h1>
+            <p>Generate question papers from your syllabus using a local LLM.</p>
+        </header>
+
+        <section class="card">
+            <h2>1. Upload Syllabus</h2>
+            <label for="file">Syllabus Document</label>
+            <input type="file" id="file" accept=".pdf,.docx">
+            <p class="info">Supported formats: PDF, DOCX</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Paper Details</h2>
+            <div class="grid">
+                <div>
+                    <label for="sub">Subject</label>
+                    <input type="text" id="sub" placeholder="e.g. Operating Systems">
+                </div>
+                <div>
+                    <label for="dur">Duration</label>
+                    <select id="dur">
+                        <option value="1 hour">1 Hour</option>
+                        <option value="2 hours">2 Hours</option>
+                        <option value="3 hours" selected>3 Hours</option>
+                        <option value="4 hours">4 Hours</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="marks">Total Marks</label>
+                    <input type="number" id="marks" min="1" placeholder="70">
+                </div>
+                <div>
+                    <label for="cnt">Number of Questions</label>
+                    <input type="number" id="cnt" min="1" placeholder="10">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>3. Question Settings</h2>
+            <div class="grid">
+                <div>
+                    <label for="diff">Difficulty Level</label>
+                    <select id="diff">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="mixed">Mixed</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="type">Question Type</label>
+                    <select id="type">
+                        <option value="mixed" selected>Mixed</option>
+                        <option value="mcq">MCQ</option>
+                        <option value="short">Short Answer</option>
+                        <option value="long">Long Answer</option>
+                        <option value="numerical">Numerical</option>
+                        <option value="case-study">Case Study</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>4. Unit Distribution</h2>
+            <p class="desc">Choose how questions should be distributed across the syllabus.</p>
+            <select id="dist">
+                <option value="balanced" selected>Balanced across all units</option>
+                <option value="random">Random distribution</option>
+                <option value="custom">Custom distribution</option>
+            </select>
+        </section>
+
+        <section class="card">
+            <h2>5. Generate</h2>
+            <button id="gen">Generate Question Paper</button>
+            <div id="status"></div>
+        </section>
+
+        <section class="card">
+            <h2>Generated Paper</h2>
+            <div id="res">
+                <p class="ph">Your generated question paper will appear here.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

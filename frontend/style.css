@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial,sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.con {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info,.desc {
+    margin-top: 8px;
+    color: #777;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+#status {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.ph {
+    color: #888;
+    text-align: center;
+    padding: 40px 0;
+}
+
+@media(max-width:600px) {
+    .con {
+        width: 95%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
+.paper {
+    padding: 25px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.paper h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.paper > p {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.paper hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.question {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.question p:last-child {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+}
